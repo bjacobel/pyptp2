@@ -261,10 +261,7 @@ class PTPCamera(_CameraBase):
         img_size = data.length
         self.logger.debug('image size ' + str(img_size-12))
 
-        #f = open('/tmp/foo.jpg', 'w')
-        #f.write(data.data)
-        #self.logger.debug('wrote tmp file')
-
+        return data.data
 
     def check_response(self, response):
         if response.code != PTP_RESPONSE_CODE.OK:
